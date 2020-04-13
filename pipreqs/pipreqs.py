@@ -427,7 +427,7 @@ def init(args):
         imports = local + get_imports_info(difference,
                                            proxy=proxy,
                                            pypi_server=pypi_server)
-    # sort imports based on lowercase name of package, similar to `pip freeze`.    
+    # sort imports based on lowercase name of package, similar to `pip freeze`.
     imports = sorted(imports, key=lambda x: x['name'].lower())
 
     path = (args["--savepath"] if args["--savepath"] else
